@@ -32,15 +32,17 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: CardWidget(item: ItemClass(,
+                    child: CardWidget(
+                  item: ItemClass(
                     title: 'Travel',
                     description: 'Travel flinston',
                     imagePath: kTravelImage,
-                  ),)
-                ),
+                  ),
+                )),
               ],
             ),
-            CardWidget(item: ItemClass(
+            CardWidget(
+                item: ItemClass(
               title: 'Yeah',
               description: 'Fock Yeah!',
               imagePath: kYeahImage,
