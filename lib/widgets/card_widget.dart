@@ -14,8 +14,10 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const DescriptionPage()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DescriptionPage(item: item)));
       },
       child: Card(
         child: Container(
