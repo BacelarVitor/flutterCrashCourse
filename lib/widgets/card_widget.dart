@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youtube/class/item_class.dart';
 import 'package:flutter_youtube/core/constants.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget(
-      {super.key,
-      required this.title,
-      required this.description,
-      required this.imagePath});
+  const CardWidget({
+    super.key,
+    required this.item,
+  });
 
-  final String imagePath;
-  final String title;
-  final String description;
+  final ItemClass item;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -22,12 +20,12 @@ class CardWidget extends StatelessWidget {
             const SizedBox(
               height: kDouble5,
             ),
-            Image.asset(imagePath),
+            Image.asset(item.imagePath),
             Text(
-              title,
+              item.title,
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
-            Text(description),
+            Text(item.description),
             const SizedBox(
               height: kDouble10,
             ),

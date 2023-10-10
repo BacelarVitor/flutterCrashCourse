@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter_youtube/class/item_class.dart";
 import "package:flutter_youtube/core/constants.dart";
 import "package:flutter_youtube/widgets/card_widget.dart";
 
@@ -11,36 +12,39 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Bacelar Co'),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             CardWidget(
-                title: 'Rocket',
-                description: 'Rocket fon!',
-                imagePath: kRocketImage),
+              item: ItemClass(
+                  title: 'Rocket',
+                  description: 'Rocket fon!',
+                  imagePath: kRocketImage),
+            ),
             Row(
               children: [
                 Expanded(
                   child: CardWidget(
-                    title: 'Space',
-                    description: 'Space flin!',
-                    imagePath: kSpaceImage,
+                    item: ItemClass(
+                        title: 'Space',
+                        description: 'Space flin!',
+                        imagePath: kSpaceImage),
                   ),
                 ),
                 Expanded(
-                  child: CardWidget(
+                  child: CardWidget(item: ItemClass(,
                     title: 'Travel',
                     description: 'Travel flinston',
                     imagePath: kTravelImage,
-                  ),
+                  ),)
                 ),
               ],
             ),
-            CardWidget(
+            CardWidget(item: ItemClass(
               title: 'Yeah',
               description: 'Fock Yeah!',
               imagePath: kYeahImage,
-            ),
+            )),
           ],
         ),
       ),
