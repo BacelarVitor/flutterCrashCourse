@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_youtube/core/constants.dart";
+import "package:flutter_youtube/widgets/card_widget.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,106 +11,35 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Bacelar Co'),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
-            Card(
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Image.asset('images/rocket.png'),
-                    const Text(
-                      'Title',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                    const Text('Description'),
-                    const SizedBox(
-                      height: 10,
-                    )
-                  ],
-                ),
-              ),
-            ),
+            CardWidget(
+                title: 'Rocket',
+                description: 'Rocket fon!',
+                imagePath: kRocketImage),
             Row(
               children: [
                 Expanded(
-                  child: Card(
-                    child: Container(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          const SizedBox(
-                            height: kDouble5,
-                          ),
-                          Image.asset('images/space.png'),
-                          const Text(
-                            'Title',
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
-                          ),
-                          const Text('Description'),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
-                    ),
+                  child: CardWidget(
+                    title: 'Space',
+                    description: 'Space flin!',
+                    imagePath: kSpaceImage,
                   ),
                 ),
                 Expanded(
-                  child: Card(
-                    child: Container(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Image.asset('images/travel.png'),
-                          const Text(
-                            'Title',
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
-                          ),
-                          const Text('Description'),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
-                    ),
+                  child: CardWidget(
+                    title: 'Travel',
+                    description: 'Travel flinston',
+                    imagePath: kTravelImage,
                   ),
                 ),
               ],
             ),
-            Card(
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Image.asset('images/yeah.png'),
-                    const Text(
-                      'Title',
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                    const Text('Description'),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                  ],
-                ),
-              ),
+            CardWidget(
+              title: 'Yeah',
+              description: 'Fock Yeah!',
+              imagePath: kYeahImage,
             ),
           ],
         ),
