@@ -9,12 +9,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Bacelar Co'),
       ),
-      body: const Column(
+      body: Column(
         children: [
           Card(
             child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('Fon!'),
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/rocket.png'),
             ),
           )
         ],
