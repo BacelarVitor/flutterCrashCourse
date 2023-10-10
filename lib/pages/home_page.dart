@@ -9,6 +9,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Bacelar Co'),
       ),
+      body: const Column(
+        children: [
+          Card(
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Fon!'),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
