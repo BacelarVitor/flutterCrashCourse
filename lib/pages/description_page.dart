@@ -24,8 +24,19 @@ class DescriptionPage extends StatelessWidget {
                       fontSize: 200, fontWeight: FontWeight.bold),
                 ),
               ),
-              //PAREI NO BACON IPSUM
-              const Text(kComunaDescription),
+              const Text(
+                kComunaDescription,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.justify,
+              ),
+              const SizedBox(
+                height: kDouble10,
+              ),
+              const Text(
+                kComunaDescription,
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.justify,
+              ),
             ],
           ),
         ),
