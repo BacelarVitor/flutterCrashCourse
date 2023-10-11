@@ -18,6 +18,16 @@ class _DescriptionPageState extends State<DescriptionPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.item.title),
+        actions: [
+          IconButton(
+            onPressed: () =>
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text('fon!'),
+              behavior: SnackBarBehavior.floating,
+            )),
+            icon: const Icon(Icons.info),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
